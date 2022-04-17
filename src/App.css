@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+}
+body {
+  background-color: #1c0c5b;
+  margin: 0;
+}
+
+.navbar {
+  background-color: #3d2c8d;
+  text-align: center;
+  color: #c996cc;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+}
+.movie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 3fr));
+  gap: 10 px;
+}
+
+.movie-card {
+  color: white;
+  background-color: red;
+  border-radius: 3%;
+  margin: 20px;
+  justify-content: space-around;
+  align-self: center;
+  width: 300px;
+  height: 400px;
+  text-align: center;
+}
+
+.movie-img {
+  width: 90%;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
