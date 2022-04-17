@@ -13,11 +13,6 @@ body {
   font-family: "Karla", sans-serif;
   font-weight: 700;
 }
-.movie {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25%, 3fr));
-  margin: 10px;
-}
 
 .movie-card {
   color: #1c0c5b;
@@ -26,7 +21,7 @@ body {
   margin: 20px;
   justify-content: space-around;
   align-self: center;
-  width: 300px;
+  width: 70%;
   height: 400px;
   text-align: center;
 }
@@ -51,4 +46,27 @@ body {
   margin: 50px 0;
   justify-content: space-between;
   padding: 0 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .movie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 3fr));
+    margin: 10px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .movie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 3fr));
+    margin: 10px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .movie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 3fr));
+    margin: 5px;
+  }
 }
