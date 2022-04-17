@@ -16,12 +16,12 @@ body {
 .movie {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25%, 3fr));
-  gap: 10 px;
+  margin: 10px;
 }
 
 .movie-card {
-  color: white;
-  background-color: red;
+  color: #1c0c5b;
+  background-color: #916bbf;
   border-radius: 3%;
   margin: 20px;
   justify-content: space-around;
@@ -30,9 +30,25 @@ body {
   height: 400px;
   text-align: center;
 }
-
+.movie-title {
+  margin: 10px 0;
+}
 .movie-img {
   width: 90%;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
+  margin: 10px 0;
+}
+
+.movie-overview {
+  text-align: justify;
+  margin: 10px 0;
+  padding: 0 15px;
+}
+
+.card-detail {
+  display: flex;
+  margin: 50px 0;
+  justify-content: space-between;
+  padding: 0 15px;
 }
