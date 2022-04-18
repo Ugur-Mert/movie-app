@@ -49,14 +49,25 @@ body {
   justify-content: space-between;
   padding: 0 15px;
 }
-.movie {
-  font-size: 1rem;
+
+.movie-page {
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+}
+.link {
+  color: #1c0c5b;
 }
 @media only screen and (min-width: 768px) {
   .movie {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     justify-items: center;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
   }
 }
 

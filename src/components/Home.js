@@ -1,5 +1,7 @@
 import React from "react";
 import MovieCard from "./MovieCard";
+
+import Navbar from "./Navbar";
 export default function Home() {
   const [movie, setMovie] = React.useState([]);
 
@@ -15,20 +17,23 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="movie">
-      {movie.map((movie) => {
-        return (
-          <MovieCard
-            key={movie.id}
-            title={movie.title}
-            poster={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
-            overview={movie.overview}
-            release={movie.release_date}
-            vote={movie.vote_average}
-            id={movie.id}
-          />
-        );
-      })}
+    <div>
+      <Navbar />
+      <div className="movie">
+        {movie.map((movie, id) => {
+          return (
+            <MovieCard
+              key={movie.id}
+              title={movie.title}
+              poster={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
+              overview={movie.overview}
+              release={movie.release_date}
+              vote={movie.vote_average}
+              id={id}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
