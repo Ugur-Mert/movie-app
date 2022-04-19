@@ -74,11 +74,15 @@ button {
   border-radius: 5px;
   background: rgba(145, 79, 168, 1);
 }
+.movie-cards {
+  display: grid;
+
+  justify-items: center;
+}
 @media only screen and (min-width: 768px) {
   .movie {
     display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(25%, 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(25%, 4fr));
   }
   .movie-page {
     display: flex;
@@ -94,12 +98,12 @@ button {
 @media only screen and (min-width: 480px) and (max-width: 768px) {
   .movie {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50%, 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
   }
   .movie-page {
     display: grid;
     color: white;
-    grid-template-columns: repeat(auto-fit, minmax(100%, 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     justify-content: center;
     justify-items: center;
     font-size: 0.8rem;

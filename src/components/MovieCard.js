@@ -11,7 +11,7 @@ export default function MovieCard(props) {
   }
 
   return (
-    <div>
+    <div className="movie-cards">
       <div onClick={cardDetail} className="movie-card">
         <h3 className="movie-title">{props.title}</h3>
         <img className="movie-img" src={props.poster} alt="poster" />
