@@ -15,7 +15,7 @@ export default function MovieCard(props) {
       <div onClick={cardDetail} className="movie-card">
         <h3 className="movie-title">{props.title}</h3>
         <img className="movie-img" src={props.poster} alt="poster" />
-        <p className="movie-overview">{props.overview.slice(0, 140) + "..."}</p>
+        <p className="movie-overview">{props.overview.slice(0, 120) + "..."}</p>
 
         <Link
           className="link"

@@ -23,7 +23,7 @@ export default function Home() {
           <MovieCard
             key={movie.id}
             title={movie.title}
-            poster={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
+            poster={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
             overview={movie.overview}
             release={movie.release_date}
             vote={movie.vote_average}
