@@ -1,7 +1,6 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
-import Navbar from "./Navbar";
 export default function Home() {
   const [movie, setMovie] = React.useState([]);
 
@@ -15,12 +14,12 @@ export default function Home() {
     }
     getMovies();
   }, []);
+  console.log(movie.title);
 
   return (
     <div>
-      <Navbar />
       <div className="movie">
-        {movie.map((movie, id) => {
+        {movie.map((movie) => {
           return (
             <MovieCard
               key={movie.id}
@@ -29,7 +28,7 @@ export default function Home() {
               overview={movie.overview}
               release={movie.release_date}
               vote={movie.vote_average}
-              id={id}
+              id={movie.id}
             />
           );
         })}
