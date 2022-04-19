@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  text-decoration: none;
 }
 body {
   background-color: #1c0c5b;
@@ -23,7 +22,7 @@ body {
   margin: 20px;
   align-self: center;
   width: 70%;
-  height: 400px;
+  height: 90%;
   text-align: center;
 }
 .movie-title {
@@ -50,24 +49,45 @@ body {
   padding: 0 15px;
 }
 
-.movie-page {
-  text-align: center;
-  font-size: 5rem;
-  color: white;
-}
 .link {
   color: #1c0c5b;
+}
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
+.mp-info {
+  display: grid;
+
+  padding: 0 8%;
+  font-family: "Karla", sans-serif;
+}
+.mp-details {
+  display: flex;
+  margin-top: 10%;
+  justify-content: space-between;
+}
+button {
+  border-width: 1px;
+  color: #fff;
+  border-color: rgba(171, 24, 126, 1);
+  font-weight: bold;
+  border-radius: 5px;
+  background: rgba(145, 79, 168, 1);
 }
 @media only screen and (min-width: 768px) {
   .movie {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     justify-items: center;
-    align-items: center;
-    justify-content: center;
-    justify-self: center;
-    align-self: center;
-    align-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 3fr));
+  }
+  .movie-page {
+    display: flex;
+    color: white;
+    margin: 2% 5%;
+  }
+  .mp-poster {
+    width: 300px;
+    height: 100%;
   }
 }
 
@@ -76,10 +96,36 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50%, 3fr));
   }
+  .movie-page {
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 3fr));
+    justify-content: center;
+    justify-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .mp-poster {
+    width: 150px;
+    height: 100%;
+  }
 }
 @media only screen and (max-width: 479px) {
   .movie {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100%, 3fr));
+  }
+  .movie-page {
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 3fr));
+    justify-content: center;
+    justify-items: center;
+    font-size: 0.4rem;
+    text-align: center;
+  }
+  .mp-poster {
+    width: 100px;
+    height: 100%;
   }
 }

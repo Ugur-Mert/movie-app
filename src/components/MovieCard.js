@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MoviePage from "./MoviePage";
+
 export default function MovieCard(props) {
   const [click, setClick] = React.useState(false);
   function cardDetail() {
@@ -15,14 +16,16 @@ export default function MovieCard(props) {
         <h3 className="movie-title">{props.title}</h3>
         <img className="movie-img" src={props.poster} alt="poster" />
         <p className="movie-overview">{props.overview.slice(0, 140) + "..."}</p>
+
         <Link
           className="link"
           to={`/movie/${props.id}`}
           element={<MoviePage />}
           key={props.id}
         >
-          <button>View More</button>
+          <button variant="outlined">View More</button>
         </Link>
+
         <div className="card-detail">
           <p>Release Date: {props.release}</p>
           <p>Rate: {props.vote}</p>
